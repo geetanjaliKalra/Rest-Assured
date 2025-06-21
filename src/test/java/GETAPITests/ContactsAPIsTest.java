@@ -1,5 +1,6 @@
 package GETAPITests;
 
+import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -35,6 +36,10 @@ public class ContactsAPIsTest {
 			
 	}
 	
+	/*
+	 * Fetching data from body
+	 */
+	
 	@Test
 public void getContactsAPIInvalidTokenTest() {
 		
@@ -45,7 +50,31 @@ public void getContactsAPIInvalidTokenTest() {
 				.get("/contacts")
 					.then().log().all()
 						.assertThat()
-								.statusCode(401);
+								.statusCode(401)
+									.and()
+										.body("error", equalTo("Please authenticate."));
+											
+			
+	}
+	
+	@Test
+public void getContactsAPIInvalidTokenTest1() {
+		
+		
+	String errorMsg	=given().log().all()
+			.header("Authorization", "Bearer IUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2ODU1NDI3ZWFkMDc2OTAwMTUzODE5Y2QiLCJpYXQiOjE3NTA0MTgzNDZ9.OAr8k7PiWhxXndDmTs239mHFIi4qwdZGkdZsnPNcT7A ")
+			.when().log().all()
+				.get("/contacts")
+					.then().log().all()
+						.assertThat()
+								.statusCode(401)
+									.and()
+										.extract()
+											.path("error");
+	
+	System.out.println(errorMsg);
+	Assert.assertEquals(errorMsg, "Please authenticate.");
+											
 			
 	}
 }

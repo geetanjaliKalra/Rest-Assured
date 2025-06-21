@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="GETAPITests.ContactsAPIsTest">
+      <class name="GETAPITests.GETWithQuery_PathParams">
         <methods>
-          <include name="getContactsAPIInvalidTokenTest"/>
+          <include name="GETWithPathParamDataProvider" invocation-numbers="0 1 2"/>
         </methods>
-      </class> <!-- GETAPITests.ContactsAPIsTest -->
+      </class> <!-- GETAPITests.GETWithQuery_PathParams -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
