@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2025-06-20T15:29:55 GST" name="Default suite" finished-at="2025-06-20T15:30:00 GST" duration-ms="4783">
+    <groups>
+    </groups>
+    <test started-at="2025-06-20T15:29:55 GST" name="Default test" finished-at="2025-06-20T15:30:00 GST" duration-ms="4783">
+      <class name="GETAPITests.ContactsAPIsTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:GETAPITests.ContactsAPIsTest@2f9f7dcf]" started-at="2025-06-20T15:29:55 GST" name="setup" finished-at="2025-06-20T15:29:55 GST" duration-ms="273" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getContactsAPIInvalidTokenTest()[pri:0, instance:GETAPITests.ContactsAPIsTest@2f9f7dcf]" started-at="2025-06-20T15:29:55 GST" name="getContactsAPIInvalidTokenTest" finished-at="2025-06-20T15:29:58 GST" duration-ms="2564" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContactsAPIInvalidTokenTest -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:GETAPITests.ContactsAPIsTest@2f9f7dcf]" started-at="2025-06-20T15:29:58 GST" name="setup" finished-at="2025-06-20T15:29:58 GST" duration-ms="2" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="getContactsAPITest()[pri:0, instance:GETAPITests.ContactsAPIsTest@2f9f7dcf]" started-at="2025-06-20T15:29:58 GST" name="getContactsAPITest" finished-at="2025-06-20T15:30:00 GST" duration-ms="1906" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- getContactsAPITest -->
+      </class> <!-- GETAPITests.ContactsAPIsTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>
