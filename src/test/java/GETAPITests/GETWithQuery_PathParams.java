@@ -50,9 +50,9 @@ public class GETWithQuery_PathParams {
 		
 		RestAssured.baseURI="https://gorest.co.in";
 		Map<String,String> queryParamareters= new HashMap<String, String>();
-		queryParamareters.put("name","saini");
+		queryParamareters.put("name","Saini");
 		queryParamareters.put("gender", "female");
-		given().log().all()
+		List<String> id =given().log().all()
 			.queryParams(queryParamareters)
 			.when().log().all()
 			.get("/public/v2/users")
@@ -60,7 +60,10 @@ public class GETWithQuery_PathParams {
 					.assertThat()
 						.statusCode(200)
 						.and()
-							.contentType(ContentType.JSON);
+							.contentType(ContentType.JSON)
+							 .extract()
+							 	.path("id");
+		System.out.println(id);
 			
 	}
 
